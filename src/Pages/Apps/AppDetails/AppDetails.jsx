@@ -4,6 +4,7 @@ import download from '../../../assets/icon-downloads.png'
 import rating from '../../../assets/icon-ratings.png'
 import review from '../../../assets/icon-review.png'
 import Container from '../../../Components/Container/Container';
+import RatingChart from '../../../Components/RatingChart/RatingChart';
 
 const AppDetails = ({ appsDataPromise }) => {
     const appsData = use(appsDataPromise)
@@ -16,7 +17,8 @@ const AppDetails = ({ appsDataPromise }) => {
     const format = Intl.NumberFormat('en', { notation: 'compact' });
     return (
         <Container>
-            <div className='flex flex-col md:flex-row items-center gap-15 border-b border-gray-300 pb-5'>
+            <div className='space-y-10'>
+                <div className='flex flex-col md:flex-row items-center gap-15 border-b border-gray-300 pb-5'>
                 <div>
                     <img src={image} alt={title} />
                 </div>
@@ -35,6 +37,17 @@ const AppDetails = ({ appsDataPromise }) => {
                     <button className='btn btn-success'>Install Now ({size} MB)</button>
                 </div>
             </div>
+
+            <div className='h-100 pb-10 border-b border-gray-300'>
+                <RatingChart ratings={ratings}></RatingChart>
+            </div>
+
+            <div>
+                <h3 className='font-bold mb-5 text-xl'>Description</h3>
+                <p className='text-gray-500'>{description}</p>
+            </div>
+            </div>
+
         </Container>
     );
 };
