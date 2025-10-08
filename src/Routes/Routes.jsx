@@ -27,7 +27,9 @@ export const router = createBrowserRouter([
         },
         {
             path:'installation',
-            Component:Installation
+            element:<Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+              <Installation appsDataPromise={appsDataPromise}></Installation>
+            </Suspense>
         },
         {
           path:'app/:appId',

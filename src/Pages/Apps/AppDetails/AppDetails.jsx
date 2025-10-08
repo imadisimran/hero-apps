@@ -8,6 +8,7 @@ import RatingChart from '../../../Components/RatingChart/RatingChart';
 import { InstalledAppContext } from '../../../Root/Root';
 import { ToastContainer, toast } from 'react-toastify';
 import { setToLocalStorage } from '../../../Utility/manageLocalStorage';
+import getShortNumber from '../../../Utility/getShortNum';
 
 const AppDetails = ({ appsDataPromise }) => {
     const appsData = use(appsDataPromise)
@@ -17,7 +18,6 @@ const AppDetails = ({ appsDataPromise }) => {
     // console.log(appData)
     // console.log(appId)
     const { image, title, companyName, id, description, size, reviews, ratingAvg, downloads, ratings } = appData
-    const format = Intl.NumberFormat('en', { notation: 'compact' });
     const [installedAppsId,setInstalledAppsId]=useContext(InstalledAppContext)
 
     const checkAvailability=()=>{
@@ -53,9 +53,9 @@ const AppDetails = ({ appsDataPromise }) => {
                     </div>
 
                     <div className='flex gap-x-10'>
-                        <Card img={download} name={'Downloads'} amount={format.format(downloads)} alt={'Download'}></Card>
+                        <Card img={download} name={'Downloads'} amount={getShortNumber(downloads)} alt={'Download'}></Card>
                         <Card img={rating} name={'Average Ratings'} amount={ratingAvg} alt={'Rating'}></Card>
-                        <Card img={review} name={'Reviews'} amount={format.format(reviews)} alt={'Reviews'}></Card>
+                        <Card img={review} name={'Reviews'} amount={getShortNumber(reviews)} alt={'Reviews'}></Card>
                     </div>
 
                     <button onClick={handleInstalled} className='btn btn-success' disabled={isInstalled}>{isInstalled?'Installed':`Install Now (${size} MB)`}</button>
