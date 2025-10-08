@@ -2,10 +2,11 @@ import Header from '../Components/Header/Header';
 import { Outlet } from 'react-router';
 import Footer from '../Components/Footer/Footer';
 import { createContext, useState } from 'react';
+import { getFromLocalStorage } from '../Utility/manageLocalStorage';
 export const InstalledAppContext=createContext();
 
 const Root = () => {
-    const [installedAppsId,setInstalledAppsId]=useState([]);
+    const [installedAppsId,setInstalledAppsId]=useState(getFromLocalStorage());
     return (
         <>
             <Header></Header>

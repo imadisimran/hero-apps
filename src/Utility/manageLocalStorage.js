@@ -15,4 +15,4 @@ const setToLocalStorage=(id)=>{
     localStorage.setItem('installedApps',JSON.stringify(list));
 }
 
-export {setToLocalStorage}
+export {setToLocalStorage,getFromLocalStorage}

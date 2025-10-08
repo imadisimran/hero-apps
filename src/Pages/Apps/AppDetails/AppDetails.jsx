@@ -19,7 +19,16 @@ const AppDetails = ({ appsDataPromise }) => {
     const { image, title, companyName, id, description, size, reviews, ratingAvg, downloads, ratings } = appData
     const format = Intl.NumberFormat('en', { notation: 'compact' });
     const [installedAppsId,setInstalledAppsId]=useContext(InstalledAppContext)
-    const [isInstalled,setIsInstalled]=useState(false);
+
+    const checkAvailability=()=>{
+        if(installedAppsId.includes(id)){
+            return true
+        }
+        return false
+    }
+
+
+    const [isInstalled,setIsInstalled]=useState(checkAvailability());
 
     const handleInstalled=()=>{
         setInstalledAppsId([...installedAppsId,id])
@@ -28,8 +37,7 @@ const AppDetails = ({ appsDataPromise }) => {
         setToLocalStorage(id)
     }
 
-
-    console.log(installedAppsId);
+    // console.log(installedAppsId);
 
     return (
         <Container>
