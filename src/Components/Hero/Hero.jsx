@@ -4,7 +4,7 @@ import hero from '../../assets/hero.png'
 const Hero = () => {
     return (
         <section className='space-y-5 bg-gray-50 pt-20'>
-            <div className='text-center space-y-5'>
+            <div className='text-center space-y-5 px-5'>
                 <h1 className='text-7xl font-bold'>We Build <br /> <span className='text-[#6e37e6]'>Productive</span> Apps</h1>
                 <p className='text-gray-500 text-lg'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.<br className='hidden md:inline'/> Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
             </div>
