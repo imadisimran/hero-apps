@@ -3,12 +3,12 @@ import Hero from '../../Components/Hero/Hero';
 import Banner from '../../Components/Banner/Banner';
 import TrendingApps from '../../Components/TrendingApps/TrendingApps';
 
-const Home = () => {
+const Home = ({appsDataPromise}) => {
     return (
         <>
             <Hero></Hero>
             <Banner></Banner>
-            <TrendingApps></TrendingApps>
+            <TrendingApps appsDataPromise={appsDataPromise}></TrendingApps>
         </>
     );
 };

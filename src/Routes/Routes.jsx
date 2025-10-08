@@ -3,6 +3,10 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Apps from "../Pages/Apps/Apps";
 import Installation from "../Pages/Installation/Installation";
+import { Suspense } from "react";
+
+const appsDataPromise = fetch('/appData.json').then(response => response.json());
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -10,7 +14,9 @@ export const router = createBrowserRouter([
     children:[
         {
             index:true,
-            Component:Home
+            element:<Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+              <Home appsDataPromise={appsDataPromise}></Home>
+            </Suspense>
         },
         {
             path:'apps',

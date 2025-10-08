@@ -1,0 +1,272 @@
+[
+  {
+    "image": "https://i.ibb.co.com/Y4xZNxsC/demo-app-1.webp",
+    "title": "Zenith Flow: Deep Work Timer",
+    "companyName": "Productivity Dynamics Ltd.",
+    "id": 3012,
+    "description": "Zenith Flow is a sophisticated productivity engine engineered to support deep work, minimizing digital distractions and maximizing concentration. Built on cognitive science, it moves beyond a simple timer by creating a focused environment. Users can customize precise work and break intervals, helping to cultivate a sustainable, high-output rhythm that prevents burnout. The interface is intentionally minimalist and calming, reducing cognitive load so you can dedicate your full mental capacity to the task at hand. Subtle notifications gently cue you to transition between concentration and rest phases.\n\nA core feature of Zenith Flow is its integrated task and project management. You can link specific tasks directly to individual focus sessions, providing a high degree of structure and making scheduling intuitive. The robust analytics dashboard offers detailed, retrospective insights into your working habits, highlighting not only total time spent but also identifying which tasks and projects are consuming the most energy. This powerful feedback loop allows you to continuously refine and optimize your workflow for peak efficiency.\n\nFor enhanced focus, the app includes a curated library of ambient soundscapes, from scientifically-backed binaural beats to nature sounds, effectively masking external noise. Motivation is reinforced through gamification; users earn 'Focus Points' for maintaining work streaks and hitting milestones, which unlock special themes and virtual rewards. This system encourages discipline and transforms the act of focusing into an engaging habit. Whether you are a student, developer, writer, or professional, Zenith Flow is your dedicated partner for smarter, more effective work.",
+    "size": 98,
+    "reviews": 92500,
+    "ratingAvg": 4.7,
+    "downloads": 4100000,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 2500 },
+      { "name": "3 star", "count": 6000 },
+      { "name": "4 star", "count": 28500 },
+      { "name": "5 star", "count": 54000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/CsBv8tNZ/demo-app-2.webp",
+    "title": "Candy Rush Saga",
+    "companyName": "Sweet Treats Games Inc.",
+    "id": 5118,
+    "description": "Dive into the deliciously addictive world of Candy Rush Saga! This match-three puzzle game takes you on a sprawling adventure across the Candyland Kingdom, featuring hundreds of unique levels filled with challenging mechanics and delightful boosters. Your goal is to swap and match three or more identical candies to clear the board and achieve high scores before you run out of moves. Each world introduces a fresh set of obstacles, from sticky jelly blocks to tricky chocolate barriers, keeping the gameplay engaging and requiring strategic planning to master.\n\nNew levels and episodes are released weekly, ensuring the sweet journey never ends. The game features vibrant, eye-catching graphics and a cheerful soundtrack that makes every session a joyous escape. Connect with friends via social media to compare scores, send lives, and compete for the top spot on the global leaderboards. Beyond the standard levels, players can engage in time-limited events and special challenges to win rare in-game power-ups and exclusive character costumes. The simplicity of the controls combined with the depth of the puzzle design makes Candy Rush Saga accessible to players of all ages, yet challenging enough for seasoned puzzle enthusiasts. It’s the perfect blend of relaxation and brain-teasing fun, ready to satisfy your sweet tooth for gaming.",
+    "size": 150,
+    "reviews": 850000,
+    "ratingAvg": 4.1,
+    "downloads": 95000000,
+    "ratings": [
+      { "name": "1 star", "count": 45000 },
+      { "name": "2 star", "count": 65000 },
+      { "name": "3 star", "count": 120000 },
+      { "name": "4 star", "count": 250000 },
+      { "name": "5 star", "count": 370000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/NnNZXD5m/demo-app-3.webp",
+    "title": "FitTrack 360",
+    "companyName": "Wellness Solutions Corp.",
+    "id": 1459,
+    "description": "FitTrack 360 is your all-in-one personalized health and fitness companion, designed to help you achieve your wellness goals through smart tracking and motivation. The app allows you to log all aspects of your health, including daily steps, calories consumed, water intake, sleep cycles, and workout intensity. Its intelligent algorithm creates fully customized training plans tailored to your current fitness level, goals (whether weight loss, muscle gain, or endurance), and available equipment, adapting dynamically as you progress. This ensures your routine remains challenging and effective, preventing plateaus.\n\nThe nutritional tracking feature boasts an extensive food database and barcode scanner, making calorie counting quick and accurate. You can also monitor macronutrient breakdowns and set personalized dietary targets, supporting popular diets like Keto, Paleo, and Veganism. Beyond simple logging, FitTrack 360 connects you to a vibrant community where you can join challenges, share achievements, and find support from fellow users. The app integrates seamlessly with popular wearables and smart devices to consolidate all your data in one place for easy review. Detailed progress reports, displayed through intuitive graphs and charts, help you visualize your journey and stay accountable. FitTrack 360 transforms the complexity of health management into a simple, engaging, and rewarding daily practice.",
+    "size": 85,
+    "reviews": 150000,
+    "ratingAvg": 4.5,
+    "downloads": 8300000,
+    "ratings": [
+      { "name": "1 star", "count": 8000 },
+      { "name": "2 star", "count": 12000 },
+      { "name": "3 star", "count": 20000 },
+      { "name": "4 star", "count": 40000 },
+      { "name": "5 star", "count": 70000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/4ZzgWLBd/demo-app-4.webp",
+    "title": "LingoQuest: Spanish Edition",
+    "companyName": "Global EdTech Labs",
+    "id": 7004,
+    "description": "Embark on a fun and effective journey to learn Spanish with LingoQuest! This highly interactive language learning application uses gamified lessons, immersive stories, and real-life conversational scenarios to build fluency from beginner to advanced levels. Our curriculum is expertly designed around spaced repetition, a proven cognitive technique that optimizes memory retention, ensuring that new vocabulary and grammar rules stick. Lessons are structured in bite-sized modules, allowing you to learn effectively whether you have five minutes or an hour.\n\nLingoQuest focuses heavily on practical communication skills, incorporating speech recognition technology to provide instant, accurate feedback on your pronunciation, helping you sound like a native speaker. Beyond the core lessons, the app features a dictionary, verb conjugator, and cultural notes that enrich your understanding of Spanish-speaking countries. Users can track their progress through a vibrant world map, unlocking new regions and challenges as they master skills. Regular quizzes and progress tests ensure continuous assessment, consolidating what you’ve learned before moving forward. With LingoQuest, learning Spanish is no longer a chore, but an enjoyable, motivating quest that prepares you for real-world interactions and opens doors to new cultures and experiences.",
+    "size": 210,
+    "reviews": 32000,
+    "ratingAvg": 4.6,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 3500 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 17000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Gfn6Pdq5/demo-app-5.webp",
+    "title": "ProLens Photo & Video Editor",
+    "companyName": "Digital Canvas Studios",
+    "id": 2881,
+    "description": "ProLens is the professional-grade editing suite packed into a mobile application, offering powerful tools for both photography and videography enthusiasts. It provides a comprehensive set of non-destructive editing features, including advanced color grading, selective adjustments using layer masks, and precise tone curve control. Photographers will appreciate the high-quality filters, vintage effects, and the ability to work with RAW image files directly on their device, maintaining maximum image fidelity throughout the editing process. For video creators, ProLens offers multi-track editing, trimming, splicing, and the application of cinematic transitions. You can adjust aspect ratios, add custom text overlays, and fine-tune audio levels for a truly polished production. A key feature is the AI-powered object removal tool, which seamlessly eliminates unwanted elements from your photos and video frames with a single tap. The app is designed for speed and intuitive use; even complex edits can can be achieved quickly thanks to the streamlined, gesture-based interface. Save your favorite custom presets to ensure a consistent aesthetic across all your content. ProLens empowers you to transform everyday footage into stunning, professional-quality media suitable for social media or high-resolution printing, making creativity accessible anywhere.",
+    "size": 350,
+    "reviews": 420000,
+    "ratingAvg": 4.4,
+    "downloads": 25000000,
+    "ratings": [
+      { "name": "1 star", "count": 20000 },
+      { "name": "2 star", "count": 35000 },
+      { "name": "3 star", "count": 65000 },
+      { "name": "4 star", "count": 130000 },
+      { "name": "5 star", "count": 170000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/PsgqgHr5/demo-app-6.webp",
+    "title": "Financial Pilot: Budget Tracker",
+    "companyName": "Apex Software Solutions",
+    "id": 4022,
+    "description": "Financial Pilot is the smart, intuitive way to take control of your personal finances. This comprehensive budgeting app allows you to effortlessly track all your income, expenses, and savings goals in one secure location. By linking your bank accounts and credit cards (securely, using bank-grade encryption), the app automatically categorizes your transactions, giving you a crystal-clear, real-time overview of where your money is going. You can easily create custom budgets for different spending areas, such as groceries, entertainment, and utilities, and receive immediate alerts when you approach your limits, helping to prevent overspending. Beyond basic tracking, Financial Pilot features powerful forecasting tools that project your future cash flow based on your current habits and planned expenditures, allowing you to make smarter financial decisions. The debt payoff planner helps you calculate the quickest route to becoming debt-free using customized strategies like the snowball or avalanche method. For saving, the app enables you to set and visualize milestones for short-term and long-term goals, from saving for a holiday to a down payment on a house. Its clean, chart-heavy interface makes complex data easy to understand, turning financial stress into financial empowerment. It’s an essential tool for anyone serious about building wealth and achieving fiscal stability.",
+    "size": 65,
+    "reviews": 68000,
+    "ratingAvg": 4.8,
+    "downloads": 2800000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 3700 },
+      { "name": "4 star", "count": 18000 },
+      { "name": "5 star", "count": 45000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Y4xZNxsC/demo-app-1.webp",
+    "title": "Kitchen Master: Recipe Guide",
+    "companyName": "Culinary Tech Group",
+    "id": 6140,
+    "description": "Kitchen Master is the must-have cooking app that serves as your personal sous chef and recipe library. Featuring over 100,000 professionally curated recipes from around the globe, it caters to all skill levels and dietary needs, including vegan, gluten-free, and low-carb options. Our intelligent search feature allows you to find recipes not just by cuisine, but also by prep time, ingredients you already have, or even by simply scanning the contents of your fridge. Each recipe comes with high-definition instructional videos, step-by-step photos, and adjustable serving sizes, making complex dishes approachable. A standout utility of the app is the integrated smart meal planner, which allows you to schedule meals for the entire week and automatically generates a corresponding shopping list, organizing items by supermarket aisle for maximum efficiency. The 'Cook Mode' features hands-free voice commands, allowing you to navigate steps without touching your device, keeping your hands clean. Users can also upload and share their own family recipes, building a personalized digital cookbook. With Kitchen Master, meal planning is simplified, food waste is reduced, and the joy of cooking is amplified, turning everyday kitchen tasks into a creative and rewarding experience. Discover new flavors and master culinary techniques with confidence.",
+    "size": 110,
+    "reviews": 210000,
+    "ratingAvg": 4.5,
+    "downloads": 11000000,
+    "ratings": [
+      { "name": "1 star", "count": 10000 },
+      { "name": "2 star", "count": 15000 },
+      { "name": "3 star", "count": 30000 },
+      { "name": "4 star", "count": 60000 },
+      { "name": "5 star", "count": 95000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/CsBv8tNZ/demo-app-2.webp",
+    "title": "Stellar Defender: Galaxy War",
+    "companyName": "Cosmic Gaming Alliance",
+    "id": 8501,
+    "description": "Stellar Defender is an epic space strategy game that plunges you into the heart of an interstellar conflict for dominance across the galaxy. As commander of your own star fleet, your mission is to explore uncharted systems, mine vital resources, construct powerful starbases, and lead massive fleets into battle against rival players and alien threats. The game features a vast, persistent universe with thousands of planets to colonize and exploit. Success depends on strategic resource management, technological advancement, and skillful diplomatic maneuvering.\n\nCustomize your starships with hundreds of unique weapons, shields, and defense modules to build the ultimate fleet capable of withstanding any attack. Engage in real-time PvP battles with players from around the world, forming powerful alliances to coordinate massive assaults and defend shared territories. The detailed tech tree allows for deep specialization, whether you focus on military might, economic superiority, or scientific discovery. Regular updates introduce new galactic sectors, seasonal events, and powerful legendary ships to acquire. Stellar Defender combines the complexity of a grand strategy title with the accessible mechanics of a mobile game, offering endless tactical depth and a constantly evolving universe for dedicated strategists.",
+    "size": 450,
+    "reviews": 185000,
+    "ratingAvg": 4.3,
+    "downloads": 7500000,
+    "ratings": [
+      { "name": "1 star", "count": 15000 },
+      { "name": "2 star", "count": 20000 },
+      { "name": "3 star", "count": 35000 },
+      { "name": "4 star", "count": 55000 },
+      { "name": "5 star", "count": 60000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/NnNZXD5m/demo-app-3.webp",
+    "title": "MindRest: Meditation & Sleep",
+    "companyName": "Inner Peace Digital",
+    "id": 9103,
+    "description": "MindRest is your essential daily retreat for guided meditation, mindfulness, and better sleep. Designed by leading psychologists and meditation experts, the app offers a vast library of guided sessions ranging from 3 to 45 minutes, tailored for specific goals such as reducing stress, improving focus, managing anxiety, and fostering gratitude. Whether you're a complete beginner or an experienced practitioner, our personalized onboarding flow ensures you start with the right track to meet your emotional and mental needs. New content, including daily meditations and motivational talks, is added every morning. A key feature is the comprehensive Sleep section, which includes narrated sleep stories designed to soothe the mind, relaxing soundscapes (like white noise and ASMR), and specialized breathing exercises that promote deep, restorative sleep. The app also features a 'Mindful Movement' series with gentle stretching and yoga practices to release physical tension. Progress tracking helps you visualize your consistency and celebrate milestones in your mindfulness journey, encouraging a long-term habit. MindRest is committed to making mental wellness accessible, providing a safe and serene digital space to unplug, recharge, and cultivate a sense of inner peace in the rush of modern life. Start your journey to a calmer, more present you today.",
+    "size": 180,
+    "reviews": 550000,
+    "ratingAvg": 4.9,
+    "downloads": 35000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000 },
+      { "name": "2 star", "count": 10000 },
+      { "name": "3 star", "count": 25000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 410000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/4ZzgWLBd/demo-app-4.webp",
+    "title": "HomeDesign 3D Studio",
+    "companyName": "Architecture Apps Co.",
+    "id": 1130,
+    "description": "HomeDesign 3D Studio is a powerful yet intuitive interior and exterior design tool that allows homeowners and professionals to visualize their dream spaces in stunning detail. You can easily draw floor plans from scratch, or import existing blueprints, and then populate them with thousands of customizable 3D models, including furniture, fixtures, plants, and structural elements. The drag-and-drop interface simplifies complex design, allowing you to quickly experiment with different layouts, wall colors, flooring materials, and lighting schemes without any prior CAD experience. A major feature is the real-time 3D rendering engine, which allows you to walk through your design as if you were already there, providing a realistic perspective of space and light. The app also includes augmented reality (AR) functionality, letting you place virtual furniture models into your actual room using your device's camera to see how they fit and look before making a purchase. The vast product catalog is constantly updated with trending items from real-world brands. Whether you're planning a full renovation, rearranging a single room, or simply exploring design concepts, HomeDesign 3D Studio provides the precision and creative freedom needed to confidently plan and execute any interior design project.",
+    "size": 280,
+    "reviews": 115000,
+    "ratingAvg": 4.2,
+    "downloads": 6500000,
+    "ratings": [
+      { "name": "1 star", "count": 8000 },
+      { "name": "2 star", "count": 15000 },
+      { "name": "3 star", "count": 25000 },
+      { "name": "4 star", "count": 35000 },
+      { "name": "5 star", "count": 32000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Gfn6Pdq5/demo-app-5.webp",
+    "title": "Data Vault: Secure Password Manager",
+    "companyName": "CyberTrust Security",
+    "id": 1055,
+    "description": "Data Vault is the industry-leading application for securing your digital life with unbreakable encryption. It provides a robust, centralized location for storing all your passwords, credit card numbers, secure notes, and personal documents. Using AES-256 bit encryption, your data is protected by a master password that only you know, ensuring maximum privacy and security across all your devices. The app includes a powerful, built-in password generator that creates complex, randomized passwords to help you avoid common security pitfalls and strengthen your online accounts against brute-force attacks. The convenience of Data Vault is unmatched, featuring a seamless browser extension and automatic login functionality, allowing you to access your accounts with a single tap or click without ever having to type a password. It offers secure sharing capabilities, allowing you to safely transmit login details to trusted family members or colleagues. Furthermore, the app actively monitors the dark web for compromised credentials, alerting you immediately if any of your stored passwords are found in a data breach so you can take swift action. Data Vault is essential for maintaining digital hygiene, combining military-grade security with user-friendly access to make managing and protecting hundreds of unique passwords simple.",
+    "size": 55,
+    "reviews": 75000,
+    "ratingAvg": 4.7,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 4000 },
+      { "name": "4 star", "count": 20000 },
+      { "name": "5 star", "count": 49500 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/PsgqgHr5/demo-app-6.webp",
+    "title": "Weather Now: Hyperlocal Forecast",
+    "companyName": "Atmosphere Data Systems",
+    "id": 1277,
+    "description": "Weather Now delivers lightning-fast, hyper-accurate weather forecasts right to your location, offering minute-by-minute predictions for the next hour and detailed forecasts for the next 15 days. Our proprietary blend of global meteorological models, satellite data, and hyperlocal ground sensors ensures you have the most precise information possible, whether you’re planning a walk or a week-long trip. The app features a stunning, animated radar map that tracks precipitation, thunderstorms, and other severe weather in real-time, allowing you to see exactly when the rain will start and stop. Beyond basic temperature and precipitation, Weather Now provides comprehensive data on wind speed and direction, UV index, humidity, barometric pressure, and air quality index (AQI). Users can set customizable alerts for severe weather events, including heavy rain, snow, or heatwaves, ensuring you are always prepared. The interface is highly customizable, allowing you to switch between dark and light modes, and select personalized widgets for your home screen that display essential information at a glance. By offering reliable, timely, and detailed environmental data, Weather Now is the essential tool for making daily decisions, outdoor planning, and staying ahead of Mother Nature.",
+    "size": 45,
+    "reviews": 610000,
+    "ratingAvg": 4.3,
+    "downloads": 30000000,
+    "ratings": [
+      { "name": "1 star", "count": 25000 },
+      { "name": "2 star", "count": 40000 },
+      { "name": "3 star", "count": 80000 },
+      { "name": "4 star", "count": 180000 },
+      { "name": "5 star", "count": 285000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Y4xZNxsC/demo-app-1.webp",
+    "title": "ReadLite: E-Reader & Library",
+    "companyName": "Literary Digital Inc.",
+    "id": 9002,
+    "description": "ReadLite transforms your device into an immersive digital library, providing access to millions of books, magazines, and periodicals, both free and paid. The application supports all major e-book formats, allowing you to effortlessly import your existing collection and enjoy a unified reading experience. Its customizable reading environment includes adjustable fonts, text sizes, line spacing, and a spectrum of background themes, including a comfortable sepia mode and a true dark mode for night reading, ensuring maximum eye comfort during long sessions. Key tools for serious readers include intuitive highlighting, annotation capabilities, and a built-in dictionary that defines words instantly without leaving the page. Sync your reading progress, bookmarks, and notes across all your devices so you can pick up exactly where you left off, whether on your phone or tablet. ReadLite also features a personalized recommendation engine that suggests new titles based on your reading history and preferences, helping you discover your next great read. The clean, distraction-free interface prioritizes the content, making reading a pure and delightful experience. It’s the perfect application for students, avid readers, and anyone looking to carry a universe of stories in their pocket.",
+    "size": 70,
+    "reviews": 290000,
+    "ratingAvg": 4.7,
+    "downloads": 18000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 4000 },
+      { "name": "3 star", "count": 15000 },
+      { "name": "4 star", "count": 80000 },
+      { "name": "5 star", "count": 190000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/CsBv8tNZ/demo-app-2.webp",
+    "title": "Music Composer Pro",
+    "companyName": "Sonic Creation Labs",
+    "id": 7401,
+    "description": "Music Composer Pro is a robust, portable digital audio workstation (DAW) that empowers musicians and producers to create, record, and mix studio-quality music anywhere. This app features a multi-track sequencer with an extensive library of virtual instruments, including realistic drums, synthesizers, orchestral sounds, and sampled acoustic instruments. The intuitive piano roll and MIDI editor make it simple to compose melodies and complex harmonies, while the mixer panel offers professional-grade effects like EQ, reverb, delay, and compression for precise sound shaping. Recording capabilities include high-quality audio input for vocals and external instruments, complete with latency compensation for flawless timing. Loop-based composition is simplified with a vast collection of royalty-free loops in various genres, from Hip Hop to EDM to Classical. Users can automate parameters for dynamic mixing and share their final tracks directly to popular music platforms or cloud storage. Regular updates introduce new instrument packs and advanced mixing features, ensuring your creative tools are always state-of-the-art. Music Composer Pro democratizes music production, offering a powerful, streamlined workflow that allows serious artists to capture inspiration whenever it strikes and produce professional results entirely on a mobile device.",
+    "size": 850,
+    "reviews": 95000,
+    "ratingAvg": 4.5,
+    "downloads": 4800000,
+    "ratings": [
+      { "name": "1 star", "count": 3000 },
+      { "name": "2 star", "count": 4000 },
+      { "name": "3 star", "count": 8000 },
+      { "name": "4 star", "count": 35000 },
+      { "name": "5 star", "count": 45000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/NnNZXD5m/demo-app-3.webp",
+    "title": "Pet Pal: Vet & Wellness Tracker",
+    "companyName": "Animal Care Digital",
+    "id": 6500,
+    "description": "Pet Pal is the ultimate digital assistant for responsible pet owners, simplifying the management of your furry friend's health and wellness. The app provides a centralized timeline for tracking all critical aspects of your pet's life, including feeding schedules, medication doses, exercise routines, and behavioral observations. A core feature is the comprehensive veterinary record manager, which securely stores vaccination history, appointment dates, insurance details, and lab results, making them instantly accessible during vet visits. Never miss an important health date again with our customizable reminder system for flea/tick treatments, annual checkups, and necessary medications. The app also includes a breed-specific information guide with typical health concerns, nutritional needs, and exercise requirements. For emergencies, a built-in locator helps you quickly find the nearest 24/7 animal hospital or pet service provider. Furthermore, Pet Pal integrates a supportive community forum where pet parents can share advice, ask questions, and connect with local services. By keeping all your pet's vital information organized and providing proactive health management tools, Pet Pal helps ensure your beloved companion lives the healthiest, happiest life possible, offering peace of mind to every owner.",
+    "size": 60,
+    "reviews": 45000,
+    "ratingAvg": 4.9,
+    "downloads": 1800000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 15000 },
+      { "name": "5 star", "count": 28000 }
+    ]
+  }
+]
