@@ -23,16 +23,16 @@ const Header = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-bold">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-bold space-y-3">
                             {navLinks}
                         </ul>
                     </div>
                     {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
                     <Link to='/'>
-                    <div className='flex gap-3 items-center'>
-                        <img className='max-w-15' src={logo} alt='Logo' />
-                        <h3 className='font-bold text-lg text-[#6e38e6]'>HERO.IO</h3>
-                    </div>
+                        <div className='flex gap-3 items-center'>
+                            <img className='max-w-12' src={logo} alt='Logo' />
+                            <h3 className='font-bold text-lg text-[#6e38e6] hidden md:block'>HERO.IO</h3>
+                        </div>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -41,7 +41,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white"><Github />Contribute</a>
+                    <a href='https://github.com/imadisimran/hero-apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white"><Github />Contribute</a>
                 </div>
             </div>
         </header>
