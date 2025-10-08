@@ -1,10 +1,13 @@
-import React, { use } from 'react';
+import React, { use, useContext, useState } from 'react';
 import { useParams } from 'react-router';
 import download from '../../../assets/icon-downloads.png'
 import rating from '../../../assets/icon-ratings.png'
 import review from '../../../assets/icon-review.png'
 import Container from '../../../Components/Container/Container';
 import RatingChart from '../../../Components/RatingChart/RatingChart';
+import { InstalledAppContext } from '../../../Root/Root';
+import { ToastContainer, toast } from 'react-toastify';
+import { setToLocalStorage } from '../../../Utility/manageLocalStorage';
 
 const AppDetails = ({ appsDataPromise }) => {
     const appsData = use(appsDataPromise)
@@ -15,6 +18,19 @@ const AppDetails = ({ appsDataPromise }) => {
     // console.log(appId)
     const { image, title, companyName, id, description, size, reviews, ratingAvg, downloads, ratings } = appData
     const format = Intl.NumberFormat('en', { notation: 'compact' });
+    const [installedAppsId,setInstalledAppsId]=useContext(InstalledAppContext)
+    const [isInstalled,setIsInstalled]=useState(false);
+
+    const handleInstalled=()=>{
+        setInstalledAppsId([...installedAppsId,id])
+        setIsInstalled(true)
+        toast(`${title} successfully installed`)
+        setToLocalStorage(id)
+    }
+
+
+    console.log(installedAppsId);
+
     return (
         <Container>
             <div className='space-y-10'>
@@ -34,7 +50,7 @@ const AppDetails = ({ appsDataPromise }) => {
                         <Card img={review} name={'Reviews'} amount={format.format(reviews)} alt={'Reviews'}></Card>
                     </div>
 
-                    <button className='btn btn-success'>Install Now ({size} MB)</button>
+                    <button onClick={handleInstalled} className='btn btn-success' disabled={isInstalled}>{isInstalled?'Installed':`Install Now (${size} MB)`}</button>
                 </div>
             </div>
 
@@ -47,7 +63,7 @@ const AppDetails = ({ appsDataPromise }) => {
                 <p className='text-gray-500'>{description}</p>
             </div>
             </div>
-
+        <ToastContainer></ToastContainer>
         </Container>
     );
 };
