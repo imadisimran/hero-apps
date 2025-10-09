@@ -6,7 +6,8 @@ import rating from '../../assets/icon-ratings.png'
 import getShortNumber from '../../Utility/getShortNum';
 import { toast, ToastContainer } from 'react-toastify';
 import PageTitle from '../../Components/PageTitle/PageTitle';
-import { Link } from 'react-router';
+import { Link, useNavigation } from 'react-router';
+import Loader from '../../Components/Loader/Loader';
 
 const Installation = ({ appsDataPromise }) => {
 
@@ -15,6 +16,8 @@ const Installation = ({ appsDataPromise }) => {
     const initialData = appsData.filter(appData => installedAppsId.includes(appData.id))
     const [installedAppsData, setInstalledAppsData] = useState(initialData);
     const [sortCategory, setSortCategory] = useState('')
+    const navigation = useNavigation()
+    const isNavigating = Boolean(navigation.location)
     useEffect(() => {
         const newData = appsData.filter(appData => installedAppsId.includes(appData.id))
         setInstalledAppsData(newData)
@@ -42,33 +45,37 @@ const Installation = ({ appsDataPromise }) => {
     }, [sortCategory])
 
     return (
-        <div className='bg-gray-50 py-20'>
-            <Container>
-                {installedAppsId.length === 0 ? <div className='col-span-full'>
-                    <h1 className='text-5xl font-bold text-center'>No Apps Installed Yet</h1>
-                    <div className='flex justify-center mt-10'>
-                        <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide">Show All Apps</Link>
-                    </div>
-                </div> : <PageTitle title={'Your Installed Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>}
-                <div className='flex justify-between items-center mb-5'>
-                    <h3 className='text-xl font-bold'>{installedAppsId.length} Apps Found</h3>
-                    <div>
-                        <select onChange={handleSelect} defaultValue="Sort By" className="select">
-                            <option disabled={true}>Sort By</option>
-                            <option>Size</option>
-                            <option>Downloads</option>
-                            <option>Rating</option>
-                        </select>
-                    </div>
-                </div>
-                <div className='space-y-5'>
-                    {
-                        installedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
-                    }
-                </div>
-                <ToastContainer></ToastContainer>
-            </Container>
-        </div>
+        <>
+            {
+                isNavigating ? <Loader></Loader> : <section className='bg-gray-50 py-20'>
+                    <Container>
+                        {installedAppsId.length === 0 ? <div className='col-span-full'>
+                            <h1 className='text-5xl font-bold text-center'>No Apps Installed Yet</h1>
+                            <div className='flex justify-center mt-10'>
+                                <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide">Show All Apps</Link>
+                            </div>
+                        </div> : <PageTitle title={'Your Installed Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>}
+                        <div className='flex justify-between items-center mb-5'>
+                            <h3 className='text-xl font-bold'>{installedAppsId.length} Apps Found</h3>
+                            <div>
+                                <select onChange={handleSelect} defaultValue="Sort By" className="select">
+                                    <option disabled={true}>Sort By</option>
+                                    <option>Size</option>
+                                    <option>Downloads</option>
+                                    <option>Rating</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className='space-y-5'>
+                            {
+                                installedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
+                            }
+                        </div>
+                        <ToastContainer></ToastContainer>
+                    </Container>
+                </section>
+            }
+        </>
     );
 };
 

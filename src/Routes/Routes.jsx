@@ -22,9 +22,8 @@ export const router = createBrowserRouter([
       },
       {
         path: 'apps',
-        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-          <Apps appsDataPromise={appsDataPromise}></Apps>
-        </Suspense>
+        Component: Apps,
+        loader:()=>fetch('/appData.json'), 
       },
       {
         path: 'installation',

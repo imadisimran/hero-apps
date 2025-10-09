@@ -8,6 +8,7 @@ const TrendingApps = () => {
     // console.log(appsData)
     const homeAppsData = appsData.slice(0, 8);
     return (
+        
         <section className='bg-gray-50 py-20'>
             <Container>
                 <PageTitle title={'Trending Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>
