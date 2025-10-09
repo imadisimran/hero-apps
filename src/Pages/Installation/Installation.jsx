@@ -6,7 +6,6 @@ import rating from '../../assets/icon-ratings.png'
 import getShortNumber from '../../Utility/getShortNum';
 import { toast, ToastContainer } from 'react-toastify';
 import PageTitle from '../../Components/PageTitle/PageTitle';
-// import { removeFromLocalStorage } from '../../Utility/manageLocalStorage';
 
 const Installation = ({ appsDataPromise }) => {
 

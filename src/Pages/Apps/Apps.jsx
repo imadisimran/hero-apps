@@ -1,23 +1,56 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import Container from '../../Components/Container/Container';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import AppCard from '../../Components/AppCard/AppCard';
 
-const Apps = ({appsDataPromise}) => {
+const Apps = ({ appsDataPromise }) => {
 
-    const appsData=use(appsDataPromise);
-    
+    const appsData = use(appsDataPromise);
+    const [searchTxt,setSearchTxt]=useState('')
+    const [foundApps,setFoundApps]=useState(appsData)
+
+    const handleSearch=(e)=>{
+        setSearchTxt(e.target.value);
+    }
+
+    useEffect(()=>{
+        const newData=appsData.filter(appData=>appData.title.toLowerCase().includes(searchTxt.toLowerCase()));
+        setFoundApps(newData)
+    },[searchTxt])
+
+    // console.log(searchTxt)
+
     return (
         <section className='bg-gray-50 py-20'>
             <Container>
+                <div className='flex justify-between items-center'>
+                    <h3 className='text-xl font-bold'>{foundApps.length} Apps Found</h3>
+                    <div>
+                        <label className="input">
+                            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g
+                                    strokeLinejoin="round"
+                                    strokeLinecap="round"
+                                    strokeWidth="2.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                >
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                            <input onChange={handleSearch} value={searchTxt} type="search" required placeholder="Search" />
+                        </label>
+                    </div>
+                </div>
                 <div>
                     <PageTitle title={'Our All Applications'} description={'Explore All Apps on the Market developed by us. We code for Millions'}></PageTitle>
 
                     <div className='grid grid-cols-[repeat(1,256px)] md:grid-cols-[repeat(3,256px)] lg:grid-cols-[repeat(4,256px)] justify-center gap-7'>
-                    {
-                        appsData.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
-                    }
-                </div>
+                        {
+                            foundApps.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
+                        }
+                    </div>
                 </div>
             </Container>
         </section>
