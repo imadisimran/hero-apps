@@ -5,6 +5,7 @@ import Apps from "../Pages/Apps/Apps";
 import Installation from "../Pages/Installation/Installation";
 import { Suspense } from "react";
 import AppDetails from "../Pages/Apps/AppDetails/AppDetails";
+import AppError from "../Components/AppError/AppError";
 
 const appsDataPromise = fetch('/appData.json').then(response => response.json());
 
@@ -36,7 +37,7 @@ export const router = createBrowserRouter([
         element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
           <AppDetails appsDataPromise={appsDataPromise}></AppDetails>
         </Suspense>,
-        errorElement: <div>This is error</div>
+        errorElement: <AppError></AppError>
       },
       {
         path: '/*',
