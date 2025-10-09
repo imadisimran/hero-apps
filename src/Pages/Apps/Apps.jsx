@@ -2,21 +2,23 @@ import React, { use, useEffect, useState } from 'react';
 import Container from '../../Components/Container/Container';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import AppCard from '../../Components/AppCard/AppCard';
+import { Link } from 'react-router';
 
 const Apps = ({ appsDataPromise }) => {
 
     const appsData = use(appsDataPromise);
-    const [searchTxt,setSearchTxt]=useState('')
-    const [foundApps,setFoundApps]=useState(appsData)
+    const [searchTxt, setSearchTxt] = useState('')
+    const [foundApps, setFoundApps] = useState(appsData)
 
-    const handleSearch=(e)=>{
+    const handleSearch = (e) => {
         setSearchTxt(e.target.value);
     }
 
-    useEffect(()=>{
-        const newData=appsData.filter(appData=>appData.title.toLowerCase().includes(searchTxt.toLowerCase()));
+    useEffect(() => {
+        const newData = appsData.filter(appData => appData.title.toLowerCase().includes(searchTxt.toLowerCase()));
         setFoundApps(newData)
-    },[searchTxt])
+    }, [searchTxt])
+
 
     // console.log(searchTxt)
 
@@ -48,7 +50,12 @@ const Apps = ({ appsDataPromise }) => {
 
                     <div className='grid grid-cols-[repeat(1,256px)] md:grid-cols-[repeat(3,256px)] lg:grid-cols-[repeat(4,256px)] justify-center gap-7'>
                         {
-                            foundApps.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
+                            foundApps.length === 0 ? <div className='col-span-full'>
+                                <h1 className='text-7xl font-bold text-center'>No Apps Found</h1>
+                                <div className='flex justify-center mt-10'>
+                                    <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide" onClick={()=>setSearchTxt('')}>Show All</Link>
+                                </div>
+                            </div> : foundApps.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
                         }
                     </div>
                 </div>
