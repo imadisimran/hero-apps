@@ -1,4 +1,4 @@
-import React, { use, useContext, useState } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 import Container from '../../Components/Container/Container';
 import { InstalledAppContext } from '../../Root/Root';
 import download from '../../assets/icon-downloads.png'
@@ -13,19 +13,37 @@ const Installation = ({ appsDataPromise }) => {
     const appsData = use(appsDataPromise);
     const [installedAppsId, setInstalledAppsId] = useContext(InstalledAppContext)
     const installedAppsData = appsData.filter(appData => installedAppsId.includes(appData.id));
-    const [sortCategory,setSortCategory]=useState('')
-    const handleSelect=(e)=>{
+    const [sortCategory, setSortCategory] = useState('')
+    const handleSelect = (e) => {
         setSortCategory(e.target.value)
     }
+
+    const [sortedAppsData, setSortedAppsData] = useState(installedAppsData)
+
+
+    useEffect(() => {
+        if (sortCategory === 'Size') {
+            const newData = [...installedAppsData].sort((a, b) => b.size - a.size);
+            setSortedAppsData(newData)
+        }
+        else if (sortCategory === 'Downloads') {
+            const newData = [...installedAppsData].sort((a, b) => b.downloads - a.downloads);
+            setSortedAppsData(newData)
+        }
+        else if (sortCategory === 'Rating') {
+            const newData = [...installedAppsData].sort((a, b) => b.ratingAvg - a.ratingAvg);
+            setSortedAppsData(newData)
+        }
+    }, [sortCategory])
 
     return (
         <div className='bg-gray-50'>
             <Container>
                 <PageTitle title={'Your Installed Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>
                 <div className='flex justify-between items-center'>
-                    <h3>{installedAppsId.length} Apps Found</h3>
+                    <h3 className='text-xl font-bold'>{installedAppsId.length} Apps Found</h3>
                     <div>
-                        <select onChange={handleSelect} defaultValue="Pick a color" className="select">
+                        <select onChange={handleSelect} defaultValue="Sort By" className="select">
                             <option disabled={true}>Sort By</option>
                             <option>Size</option>
                             <option>Downloads</option>
@@ -35,7 +53,7 @@ const Installation = ({ appsDataPromise }) => {
                 </div>
                 <div className='space-y-5'>
                     {
-                        installedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
+                        sortedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
                     }
                 </div>
                 <ToastContainer></ToastContainer>
