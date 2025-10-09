@@ -11,32 +11,38 @@ const appsDataPromise = fetch('/appData.json').then(response => response.json())
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component:Root,
-    children:[
-        {
-            index:true,
-            element:<Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-              <Home appsDataPromise={appsDataPromise}></Home>
-            </Suspense>
-        },
-        {
-            path:'apps',
-            element:<Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-              <Apps appsDataPromise={appsDataPromise}></Apps>
-            </Suspense>
-        },
-        {
-            path:'installation',
-            element:<Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-              <Installation appsDataPromise={appsDataPromise}></Installation>
-            </Suspense>
-        },
-        {
-          path:'app/:appId',
-          element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-              <AppDetails appsDataPromise={appsDataPromise}></AppDetails>
-            </Suspense>
-        }
+    Component: Root,
+    children: [
+      {
+        index: true,
+        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+          <Home appsDataPromise={appsDataPromise}></Home>
+        </Suspense>
+      },
+      {
+        path: 'apps',
+        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+          <Apps appsDataPromise={appsDataPromise}></Apps>
+        </Suspense>
+      },
+      {
+        path: 'installation',
+        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+          <Installation appsDataPromise={appsDataPromise}></Installation>
+        </Suspense>
+      },
+      {
+        path: 'app/:appId',
+        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
+          <AppDetails appsDataPromise={appsDataPromise}></AppDetails>
+        </Suspense>,
+        errorElement: <div>This is error</div>
+      },
+      {
+        path: '/*',
+        element: <div>Root Error</div>
+      }
     ]
   },
+
 ]);

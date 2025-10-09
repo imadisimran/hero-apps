@@ -11,27 +11,32 @@ const Installation = ({ appsDataPromise }) => {
 
     const appsData = use(appsDataPromise);
     const [installedAppsId, setInstalledAppsId] = useContext(InstalledAppContext)
-    const installedAppsData = appsData.filter(appData => installedAppsId.includes(appData.id));
+    const initialData=appsData.filter(appData => installedAppsId.includes(appData.id))
+    const [installedAppsData,setInstalledAppsData] = useState(initialData);
     const [sortCategory, setSortCategory] = useState('')
+    useEffect(()=>{
+        const newData=appsData.filter(appData => installedAppsId.includes(appData.id))
+        setInstalledAppsData(newData)
+    },[installedAppsId])
     const handleSelect = (e) => {
         setSortCategory(e.target.value)
     }
 
-    const [sortedAppsData, setSortedAppsData] = useState(installedAppsData)
+    // const [sortedAppsData, setSortedAppsData] = useState(installedAppsData)
 
 
     useEffect(() => {
         if (sortCategory === 'Size') {
             const newData = [...installedAppsData].sort((a, b) => b.size - a.size);
-            setSortedAppsData(newData)
+            setInstalledAppsData(newData)
         }
         else if (sortCategory === 'Downloads') {
             const newData = [...installedAppsData].sort((a, b) => b.downloads - a.downloads);
-            setSortedAppsData(newData)
+            setInstalledAppsData(newData)
         }
         else if (sortCategory === 'Rating') {
             const newData = [...installedAppsData].sort((a, b) => b.ratingAvg - a.ratingAvg);
-            setSortedAppsData(newData)
+            setInstalledAppsData(newData)
         }
     }, [sortCategory])
 
@@ -52,7 +57,7 @@ const Installation = ({ appsDataPromise }) => {
                 </div>
                 <div className='space-y-5'>
                     {
-                        sortedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
+                        installedAppsData.map(installedAppData => <InstallationCard key={installedAppData.id} installedAppData={installedAppData} installedAppsId={installedAppsId} setInstalledAppsId={setInstalledAppsId}></InstallationCard>)
                     }
                 </div>
                 <ToastContainer></ToastContainer>
