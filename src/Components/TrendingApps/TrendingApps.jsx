@@ -1,12 +1,10 @@
-
-import React, { use } from 'react';
 import Container from '../Container/Container';
 import AppCard from '../AppCard/AppCard';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import PageTitle from '../PageTitle/PageTitle';
 
-const TrendingApps = ({ appsDataPromise }) => {
-    const appsData = use(appsDataPromise);
+const TrendingApps = () => {
+    const appsData = useLoaderData();
     // console.log(appsData)
     const homeAppsData = appsData.slice(0, 8);
     return (

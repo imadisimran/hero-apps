@@ -17,9 +17,8 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-          <Home appsDataPromise={appsDataPromise}></Home>
-        </Suspense>
+        Component:Home,
+        loader:()=>fetch('/appData.json'),
       },
       {
         path: 'apps',

@@ -6,18 +6,19 @@ import rating from '../../assets/icon-ratings.png'
 import getShortNumber from '../../Utility/getShortNum';
 import { toast, ToastContainer } from 'react-toastify';
 import PageTitle from '../../Components/PageTitle/PageTitle';
+import { Link } from 'react-router';
 
 const Installation = ({ appsDataPromise }) => {
 
     const appsData = use(appsDataPromise);
     const [installedAppsId, setInstalledAppsId] = useContext(InstalledAppContext)
-    const initialData=appsData.filter(appData => installedAppsId.includes(appData.id))
-    const [installedAppsData,setInstalledAppsData] = useState(initialData);
+    const initialData = appsData.filter(appData => installedAppsId.includes(appData.id))
+    const [installedAppsData, setInstalledAppsData] = useState(initialData);
     const [sortCategory, setSortCategory] = useState('')
-    useEffect(()=>{
-        const newData=appsData.filter(appData => installedAppsId.includes(appData.id))
+    useEffect(() => {
+        const newData = appsData.filter(appData => installedAppsId.includes(appData.id))
         setInstalledAppsData(newData)
-    },[installedAppsId])
+    }, [installedAppsId])
     const handleSelect = (e) => {
         setSortCategory(e.target.value)
     }
@@ -41,10 +42,15 @@ const Installation = ({ appsDataPromise }) => {
     }, [sortCategory])
 
     return (
-        <div className='bg-gray-50'>
+        <div className='bg-gray-50 py-20'>
             <Container>
-                <PageTitle title={'Your Installed Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>
-                <div className='flex justify-between items-center'>
+                {installedAppsId.length === 0 ? <div className='col-span-full'>
+                    <h1 className='text-5xl font-bold text-center'>No Apps Installed Yet</h1>
+                    <div className='flex justify-center mt-10'>
+                        <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide">Show All Apps</Link>
+                    </div>
+                </div> : <PageTitle title={'Your Installed Apps'} description={'Explore All Trending Apps on the Market developed by us'}></PageTitle>}
+                <div className='flex justify-between items-center mb-5'>
                     <h3 className='text-xl font-bold'>{installedAppsId.length} Apps Found</h3>
                     <div>
                         <select onChange={handleSelect} defaultValue="Sort By" className="select">
