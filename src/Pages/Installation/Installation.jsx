@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Container from '../../Components/Container/Container';
 import { InstalledAppContext } from '../../Root/Root';
 import download from '../../assets/icon-downloads.png'
@@ -6,12 +6,12 @@ import rating from '../../assets/icon-ratings.png'
 import getShortNumber from '../../Utility/getShortNum';
 import { toast, ToastContainer } from 'react-toastify';
 import PageTitle from '../../Components/PageTitle/PageTitle';
-import { Link, useNavigation } from 'react-router';
+import { Link, useLoaderData, useNavigation } from 'react-router';
 import Loader from '../../Components/Loader/Loader';
 
-const Installation = ({ appsDataPromise }) => {
+const Installation = () => {
 
-    const appsData = use(appsDataPromise);
+    const appsData = useLoaderData();
     const [installedAppsId, setInstalledAppsId] = useContext(InstalledAppContext)
     const initialData = appsData.filter(appData => installedAppsId.includes(appData.id))
     const [installedAppsData, setInstalledAppsData] = useState(initialData);

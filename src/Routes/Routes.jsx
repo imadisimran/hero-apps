@@ -8,8 +8,6 @@ import AppDetails from "../Pages/Apps/AppDetails/AppDetails";
 import AppError from "../Pages/AppError/AppError";
 import PageError from "../Pages/PageError/PageError";
 
-const appsDataPromise = fetch('/appData.json').then(response => response.json());
-
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -27,15 +25,13 @@ export const router = createBrowserRouter([
       },
       {
         path: 'installation',
-        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-          <Installation appsDataPromise={appsDataPromise}></Installation>
-        </Suspense>
+        Component: Installation,
+        loader:()=>fetch('/appData.json'), 
       },
       {
         path: 'app/:appId',
-        element: <Suspense fallback={<h1 className="font-bold text-7xl">Data is loading</h1>}>
-          <AppDetails appsDataPromise={appsDataPromise}></AppDetails>
-        </Suspense>,
+        Component: AppDetails,
+        loader:()=>fetch('/appData.json'), 
         errorElement: <AppError></AppError>
       },
       {
