@@ -18,7 +18,7 @@ const TrendingApps = ({ appsDataPromise }) => {
                         homeAppsData.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
                     }
                 </div>
-                <div className='flex justify-center'>
+                <div className='flex justify-center mt-5'>
                     <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide">Show All</Link>
                 </div>
             </Container>
