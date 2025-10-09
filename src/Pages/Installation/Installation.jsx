@@ -20,27 +20,43 @@ const Installation = () => {
     const isNavigating = Boolean(navigation.location)
     useEffect(() => {
         const newData = appsData.filter(appData => installedAppsId.includes(appData.id))
-        setInstalledAppsData(newData)
+        setInstalledAppsData(sortFunctionality(newData))
     }, [installedAppsId])
     const handleSelect = (e) => {
         setSortCategory(e.target.value)
     }
 
-    // const [sortedAppsData, setSortedAppsData] = useState(installedAppsData)
 
+    const sortFunctionality=(newData)=>{
+        if (sortCategory === 'Size') {
+            const sortData = [...newData].sort((a, b) => b.size - a.size);
+            return sortData
+        }
+        else if (sortCategory === 'Downloads') {
+            const sortData = [...newData].sort((a, b) => b.downloads - a.downloads);
+            return sortData
+        }
+        else if (sortCategory === 'Rating') {
+            const sortData = [...newData].sort((a, b) => b.ratingAvg - a.ratingAvg);
+            return sortData
+        }
+        else{
+            return newData
+        }
+    }
 
     useEffect(() => {
         if (sortCategory === 'Size') {
-            const newData = [...installedAppsData].sort((a, b) => b.size - a.size);
-            setInstalledAppsData(newData)
+            const sortData = [...installedAppsData].sort((a, b) => b.size - a.size);
+            setInstalledAppsData(sortData)
         }
         else if (sortCategory === 'Downloads') {
-            const newData = [...installedAppsData].sort((a, b) => b.downloads - a.downloads);
-            setInstalledAppsData(newData)
+            const sortData = [...installedAppsData].sort((a, b) => b.downloads - a.downloads);
+            setInstalledAppsData(sortData)
         }
         else if (sortCategory === 'Rating') {
-            const newData = [...installedAppsData].sort((a, b) => b.ratingAvg - a.ratingAvg);
-            setInstalledAppsData(newData)
+            const sortData = [...installedAppsData].sort((a, b) => b.ratingAvg - a.ratingAvg);
+            setInstalledAppsData(sortData)
         }
     }, [sortCategory])
 
