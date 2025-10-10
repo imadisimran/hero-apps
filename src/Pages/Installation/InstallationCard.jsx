@@ -18,8 +18,8 @@ const InstallationCard = ({ installedAppData, setInstalledAppsId, installedAppsI
 
     return (
 
-        <div className='bg-white p-5 rounded-xl flex justify-between items-center'>
-            <div className='flex gap-10 items-center'>
+        <div className='bg-white p-5 rounded-xl flex flex-col md:flex-row justify-between items-center'>
+            <div className='flex  gap-10 items-center'>
                 <img className='w-30 rounded-xl' src={image} alt={title} />
                 <div className='space-y-5'>
                     <h3 className='text-lg font-bold'>{title}</h3>
