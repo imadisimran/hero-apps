@@ -3,7 +3,7 @@ import Container from '../../Components/Container/Container';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import AppCard from '../../Components/AppCard/AppCard';
 import { Link, useLoaderData, useNavigation } from 'react-router';
-import Loader from '../../Components/Loader/Loader';
+import Loader, { LoaderSmall } from '../../Components/Loader/Loader';
 
 const Apps = () => {
 
@@ -12,7 +12,7 @@ const Apps = () => {
     const [foundApps, setFoundApps] = useState(appsData)
     const navigation = useNavigation()
     const isNavigating = Boolean(navigation.location)
-
+    const [loading, setLoading]=useState(false)
     const handleSearch = (e) => {
         setSearchTxt(e.target.value);
     }
@@ -20,7 +20,15 @@ const Apps = () => {
     useEffect(() => {
         const newData = appsData.filter(appData => appData.title.toLowerCase().includes(searchTxt.toLowerCase()));
         setFoundApps(newData)
+        setLoading(true)
+        setTimeout(()=>setLoading(false),500)
     }, [searchTxt])
+
+    
+
+    useEffect(()=>{
+        setTimeout(()=>setLoading(false),1000)
+    },[])
 
 
     // console.log(searchTxt)
@@ -55,12 +63,15 @@ const Apps = () => {
 
                             <div className='grid grid-cols-[repeat(1,256px)] md:grid-cols-[repeat(3,256px)] lg:grid-cols-[repeat(4,256px)] justify-center gap-7'>
                                 {
-                                    foundApps.length === 0 ? <div className='col-span-full'>
+
+                                    loading ? <LoaderSmall></LoaderSmall> : foundApps.length === 0 ? <div className='col-span-full'>
                                         <h1 className='text-7xl font-bold text-center'>No Apps Found</h1>
                                         <div className='flex justify-center mt-10'>
                                             <Link to='/apps' className="btn bg-gradient-to-br from-[#6e38e6] to-[#9d70ff] text-white btn-wide" onClick={() => setSearchTxt('')}>Show All</Link>
                                         </div>
                                     </div> : foundApps.map(appData => <AppCard key={appData.id} appData={appData}></AppCard>)
+
+                                    
                                 }
                             </div>
                         </div>

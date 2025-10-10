@@ -80,7 +80,7 @@ const Installation = () => {
                         <div className='flex justify-between items-center mb-5'>
                             <h3 className='text-xl font-bold'>{installedAppsId.length} Apps Found</h3>
                             <div className='flex gap-5'>
-                                <select onChange={handleSelect} defaultValue="Sort By" className="select">
+                                <select onChange={handleSelect} defaultValue="Size" className="select">
                                     <option disabled={true}>Sort By</option>
                                     <option>Size</option>
                                     <option>Downloads</option>
